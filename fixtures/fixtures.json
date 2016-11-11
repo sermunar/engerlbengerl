@@ -1,0 +1,8 @@
+[
+    {
+        "model": "User",
+        "data": {
+            "username": "testuser"
+        }
+    }
+]
