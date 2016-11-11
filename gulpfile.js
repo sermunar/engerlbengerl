@@ -9,8 +9,14 @@ var config = {
     headHtml: 'views/head.html',
     templatesHtml: 'views/templates/**/*.html',
     bodyHtml: 'views/body.html',
-    viewsHtml: 'views/**/*.html'
+    viewsHtml: 'views/**/*.html',
+    bowerComponentsJs: [
+        './bower_components/knockout/dist/knockout.js',
+        './bower_components/knockout-validation/dist/knockout.validation.js'
+    ]
 };
+
+gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js']);
 
 gulp.task('app-ts', function () {
     var tsResult = tsProject.src()
@@ -25,6 +31,12 @@ gulp.task('app-ts', function () {
 gulp.task('index-html', function() {
     return gulp.src([config.headHtml, config.templatesHtml, config.bodyHtml])
         .pipe(concat('index.html'))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('bowerComponents-js', function() {
+    return gulp.src(config.bowerComponentsJs)
+        .pipe(concat('bower_components.js'))
         .pipe(gulp.dest('./'));
 });
 
