@@ -3,6 +3,7 @@ var ts = require('gulp-typescript');
 var tsProject = ts.createProject('tsconfig.json');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
+var less = require('gulp-less');
 
 var config = {
     appTs: 'app/**/*.ts',
@@ -15,10 +16,20 @@ var config = {
         './bower_components/knockout/dist/knockout.js',
         './bower_components/knockout-validation/dist/knockout.validation.js',
         './bower_components/bootstrap/js/bootstrap.min.js'
-    ]
+    ],
+    styleLess: './less/style.less',
+    allLess: './less/**/*.less'
 };
 
-gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js']);
+gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js', 'less']);
+
+gulp.task('less', function() {
+    return gulp.src(config.styleLess)
+        .pipe(sourcemaps.init())
+        .pipe(less())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./public/css'));
+});
 
 gulp.task('app-ts', function () {
     var tsResult = tsProject.src()
@@ -45,7 +56,7 @@ gulp.task('bowerComponents-js', function() {
 /*
     watch
 */
-gulp.task('watch-all', ['watch-app-ts', 'watch-html']);
+gulp.task('watch-all', ['watch-app-ts', 'watch-html', 'watch-less']);
 
 gulp.task('watch-app-ts',  function () {
     var watcher = gulp.watch(config.appTs, ['app-ts']);
@@ -56,6 +67,13 @@ gulp.task('watch-app-ts',  function () {
 
 gulp.task('watch-html',  function () {
     var watcher = gulp.watch(config.viewsHtml, ['index-html']);
+    watcher.on('change', function(event) {
+        console.log('File ' + event.path + ' was ' + event.type);
+    });
+});
+
+gulp.task('watch-less', function() {
+    var watcher = gulp.watch(config.allLess, ['less']);
     watcher.on('change', function(event) {
         console.log('File ' + event.path + ' was ' + event.type);
     });
