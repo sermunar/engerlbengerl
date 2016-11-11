@@ -1,0 +1,29 @@
+{
+  "name": "webprojtemplate",
+  "version": "1.0.0",
+  "description": "A template to create simple web projects based on node server with express 4, sequelize, sequelize-fixture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sermunar/webprojtemplate.git"
+  },
+  "author": "Serkan Munar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sermunar/webprojtemplate/issues"
+  },
+  "homepage": "https://github.com/sermunar/webprojtemplate#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.2.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "sequelize": "^3.25.0",
+    "sequelize-fixtures": "^0.5.5",
+    "sqlite3": "^3.1.8",
+    "typings": "^2.0.0"
+  }
+}
