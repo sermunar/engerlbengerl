@@ -38,7 +38,7 @@ gulp.task('app-ts', function () {
     
     return tsResult.js 
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('index-html', function() {
@@ -50,7 +50,7 @@ gulp.task('index-html', function() {
 gulp.task('bowerComponents-js', function() {
     return gulp.src(config.bowerComponentsJs)
         .pipe(concat('bower_components.js'))
-        .pipe(gulp.dest('./'));
+        .pipe(gulp.dest('./public/js'));
 });
 
 /*
