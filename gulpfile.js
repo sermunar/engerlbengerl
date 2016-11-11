@@ -18,10 +18,11 @@ var config = {
         './bower_components/bootstrap/js/bootstrap.min.js'
     ],
     styleLess: './less/style.less',
-    allLess: './less/**/*.less'
+    allLess: './less/**/*.less',
+    glyphicons: './bower_components/bootstrap/dist/fonts/**/*.*'
 };
 
-gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js', 'less']);
+gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js', 'less', 'glyphicons']);
 
 gulp.task('less', function() {
     return gulp.src(config.styleLess)
@@ -51,6 +52,11 @@ gulp.task('bowerComponents-js', function() {
     return gulp.src(config.bowerComponentsJs)
         .pipe(concat('bower_components.js'))
         .pipe(gulp.dest('./public/js'));
+});
+
+gulp.task('glyphicons', function() {
+    return gulp.src(config.glyphicons)
+        .pipe(gulp.dest('./public/fonts'));
 });
 
 /*
