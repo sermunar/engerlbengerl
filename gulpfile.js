@@ -11,8 +11,10 @@ var config = {
     bodyHtml: 'views/body.html',
     viewsHtml: 'views/**/*.html',
     bowerComponentsJs: [
+        './bower_components/jquery/dist/jquery.min.js',
         './bower_components/knockout/dist/knockout.js',
-        './bower_components/knockout-validation/dist/knockout.validation.js'
+        './bower_components/knockout-validation/dist/knockout.validation.js',
+        './bower_components/bootstrap/js/bootstrap.min.js'
     ]
 };
 
@@ -21,7 +23,7 @@ gulp.task('build', ['app-ts', 'index-html', 'bowerComponents-js']);
 gulp.task('app-ts', function () {
     var tsResult = tsProject.src()
         .pipe(sourcemaps.init())
-        .pipe(tsProject());  
+        .pipe(tsProject());
     
     return tsResult.js 
         .pipe(sourcemaps.write())
@@ -39,7 +41,6 @@ gulp.task('bowerComponents-js', function() {
         .pipe(concat('bower_components.js'))
         .pipe(gulp.dest('./'));
 });
-
 
 /*
     watch
