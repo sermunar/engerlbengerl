@@ -1,24 +1,17 @@
-#step 1 npm init
-- npm init
+A simple template to build web-projects.
+Server: node.js with express
+Database: sequilize (and sequilize-fixtures) with sqlite 
+Web: Typescript, KnockoutJS (and Knockout-Validation) and Bootstrap
 
-#step 2 install extensions
-- npm install express --save
-- npm install sequelize --save
-- npm install sqlite3 --save
-- npm install sequelize-fixtures --save
-- npm install gulp --save
-- npm install typings --global
-- npm install gulp-less --save
-- npm install gulp-sourcemaps --save
+### Prerequisites (global)
+- node 
+- npm
+- bower 
+- typings
 
-#step 3 mkdir 
-- mkdir models
-- mkdir fixtures
-- mkdir routes
-- mkdir public
-- mkdir public\less
-- mkdir public\fonts
-- mkdir public\img
-- mkdir views
-
-#step 4 create files
+### Usage
+- Clone Repository
+- Call "npm install & npm update"
+- Call "bower install & bower update"
+- Call "node index.js"
+- Open browser "http://localhost:3000"
