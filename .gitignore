@@ -1,6 +1,7 @@
 node_modules/
 bower_components/
 .vscode*
+typings/
 
 #Ignore thumbnails created by Windows
 Thumbs.db
