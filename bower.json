@@ -1,0 +1,21 @@
+{
+  "name": "webprojtemplate",
+  "description": "A template to create simple web projects based on node server with express 4, sequelize, sequelize-fixture.",
+  "main": "app.js",
+  "authors": [
+    "Serkan Munar"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/sermunar/webprojtemplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "knockout": "^3.4.1",
+    "knockout-validation": "^2.0.3"
+  }
+}

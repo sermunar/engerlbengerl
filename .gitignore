@@ -1,5 +1,5 @@
 node_modules/
-
+bower_components/
 
 #Ignore thumbnails created by Windows
 Thumbs.db

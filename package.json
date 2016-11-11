@@ -21,9 +21,11 @@
     "gulp": "^3.9.1",
     "gulp-less": "^3.2.0",
     "gulp-sourcemaps": "^2.2.0",
+    "gulp-typescript": "^3.1.2",
     "sequelize": "^3.25.0",
     "sequelize-fixtures": "^0.5.5",
     "sqlite3": "^3.1.8",
+    "typescript": "^2.0.9",
     "typings": "^2.0.0"
   }
 }
