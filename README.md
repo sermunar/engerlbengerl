@@ -1,28 +1,5 @@
-A simple template to build web-projects.
+#Spource
+Copy of [Webprojtemplate](https://github.com/sermunar/webprojtemplate.git)
 
-Server: node.js with express
-
-Database: sequilize (and sequilize-fixtures) with sqlite
- 
-Web: Typescript, KnockoutJS (and Knockout-Validation) and Bootstrap
-
-### Prerequisites (global)
-- node 
-- npm
-- bower 
-- typings
-- sqlite
-
-### Usage
-- [Clone/Copy Repository](https://help.github.com/articles/duplicating-a-repository/)
-- Open command prompt in working directory
-- Call "npm install & npm update"
-- Call "bower install & bower update"
-- Call "typings install"
-- Create a sqlite db file named "databse.db" in storage folder
-- Call "gulp build"
-- Call "node index.js"
-- Open browser "http://localhost:3000"
-
-#### Developement
-Use watch-all gulp task ("gulp watch-all") to ensure compileOnSave.
+#Description
+A webbased game, to create and play the wellkown "Engerl und Bengerl" (also known as "Wichterln") game.
