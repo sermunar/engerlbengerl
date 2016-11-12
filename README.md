@@ -19,7 +19,7 @@ Web: Typescript, KnockoutJS (and Knockout-Validation) and Bootstrap
 - Call "npm install & npm update"
 - Call "bower install & bower update"
 - Call "typings install"
-- Create a sqlite db file names "databse.db" in storage folder
+- Create a sqlite db file named "databse.db" in storage folder
 - Call "gulp build"
 - Call "node index.js"
 - Open browser "http://localhost:3000"
