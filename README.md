@@ -13,7 +13,7 @@ Web: Typescript, KnockoutJS (and Knockout-Validation) and Bootstrap
 - typings
 
 ### Usage
-- Clone Repository
+- [Clone/Copy Repository](https://help.github.com/articles/duplicating-a-repository/)
 - Open command prompt in working directory
 - Call "npm install & npm update"
 - Call "bower install & bower update"
